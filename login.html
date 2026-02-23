@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Access | Library Portal</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-card">
+        <div class="login-header">
+            <h2>Secure Access</h2>
+            <p>Library Maintenance System Login</p>
+        </div>
+
+        <form action="index.html" method="POST">
+            <!-- Role Selection -->
+            <div class="form-group">
+                <label for="role">SELECT SYSTEM ROLE</label>
+                <select id="role" name="role" class="form-control" required>
+                    <option value="" disabled selected>Identify your role</option>
+                    <option value="admin">Administrator</option>
+                    <option value="librarian">Librarian</option>
+                    <option value="faculty">Faculty Member</option>
+                    <option value="student">Student Representative</option>
+                </select>
+            </div>
+
+            <!-- Username -->
+            <div class="form-group">
+                <label for="username">USERNAME / UNIQUE ID</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter library ID" required>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required>
+            </div>
+
+            <!-- Options Row: Remember Me & Forgot Password -->
+            <div class="options-row">
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Remember me
+                </label>
+                <a href="#" class="forgot-link">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="submit-btn" action="index.html">Authorize Login</button>
+        </form>
+
+        <div class="card-footer">
+            <a href="index.html">← Return to Main Website</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

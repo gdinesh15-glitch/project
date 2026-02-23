@@ -1,0 +1,207 @@
+/* CSS VARIABLES */
+
+:root {
+    --primary: #1a2a6c;
+    --secondary: #4b2c20;
+    --accent: #b8860b;
+    --cream: #fdfcf0;
+    --white: #ffffff;
+    --text-dark: #2d3436;
+    --transition: all 0.4s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--white);
+    padding: 1rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+}
+
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(26, 42, 108, 0.7), rgba(75, 44, 32, 0.7)), url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 5%;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h2 {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.btn-login {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 18px 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 10px 20px rgba(184, 134, 11, 0.3);
+    transition: var(--transition);
+}
+
+.btn-login:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stats {
+    background-color: var(--primary);
+    color: white;
+    padding: 4rem 8%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-item h4 {
+    font-size: 2.5rem;
+    font-family: 'Merriweather', serif;
+    color: var(--accent);
+}
+
+.stat-item p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.features {
+    padding: 5rem 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.feature-card {
+    background-color: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+    border: 1px solid #f0f0f0;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent);
+}
+
+.feature-card h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 4rem 8% 2rem;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.1rem;
+    }
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .stats {
+        flex-direction: column;
+    }
+}
